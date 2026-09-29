@@ -56,7 +56,8 @@ T3 - Public
 
 Known non-tier items
 - T4 stretch features were not implemented
-- Acceptance test files are not yet packaged as automated test modules
+- Automated smoke tests are packaged in tests/test_acceptance.py and all 4 tests passed
 
 Conclusion
 T1, T2, and T3 functionality is implemented and manually acceptance-tested against the local Docker deployment.
+
