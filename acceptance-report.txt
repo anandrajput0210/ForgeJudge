@@ -1,0 +1,62 @@
+ForgeJudge - Dogfood 2026 Acceptance Report
+
+Environment
+- Docker Compose local deployment
+- Frontend: http://localhost:3000
+- Backend: http://localhost:8000
+- PostgreSQL: 16
+
+Deployment
+[PASS] docker compose up starts backend, frontend, and database
+[PASS] Backend health endpoint returns status=ok
+[PASS] Frontend returns HTTP 200
+
+T1 - Core
+[PASS] Authentication and role-based access
+[PASS] Event, track, and prize workflows
+[PASS] Team creation and invitations
+[PASS] Project creation, editing, and submission
+[PASS] Submission deadline enforcement
+[PASS] Public project gallery
+
+T2 - Judging
+[PASS] Judge invitation and acceptance
+[PASS] Judge assignment
+[PASS] Assignment idempotency
+[PASS] Team-member conflict exclusion in assignment algorithm
+[PASS] Weighted rubric with criteria weights totaling 100
+[PASS] Score range validation
+[PASS] Judge assignment isolation
+[PASS] Participant blocked from judge endpoints
+[PASS] Judge progress tracking
+[PASS] Organizer judging progress tracking
+[PASS] CSV judging export
+[PASS] Cross-judge normalization
+[PASS] Normalized leaderboard
+
+Normalization Proof
+- Judge 2 completed 4 assignments
+- Judge 6 completed 4 assignments
+- Normalization changed Project 1 raw judge scores into normalized scores
+- Leaderboard consumed normalized final scores
+
+T3 - Public
+[PASS] Community voting
+[PASS] Configurable voting
+[PASS] Voting disabled state is enforced
+[PASS] One vote per participant per event
+[PASS] Own-team voting blocked
+[PASS] Voting rate limiting
+[PASS] Voting results hidden while voting is open
+[PASS] Voting results revealed after voting closes
+[PASS] Randomized project ordering
+[PASS] Project comments
+[PASS] Vote audit trail
+[PASS] Comment audit trail
+
+Known non-tier items
+- T4 stretch features were not implemented
+- Acceptance test files are not yet packaged as automated test modules
+
+Conclusion
+T1, T2, and T3 functionality is implemented and manually acceptance-tested against the local Docker deployment.

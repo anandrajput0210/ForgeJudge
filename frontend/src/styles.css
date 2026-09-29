@@ -1,0 +1,242 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #172033;
+  background: #f4f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+a {
+  color: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 6%;
+  background: #111827;
+  color: white;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.topbar p {
+  margin: 4px 0 0;
+  opacity: 0.75;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.user-area button,
+.hero > button,
+.login-box button,
+.actions button,
+.comment-box button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 44px 24px 20px;
+}
+
+.hero h2 {
+  margin: 0 0 8px;
+  font-size: 34px;
+}
+
+.hero > p {
+  margin: 0 0 24px;
+  color: #64748b;
+}
+
+.login-box {
+  max-width: 430px;
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.login-box h3 {
+  margin: 0 0 6px;
+}
+
+.login-box input,
+.comment-box textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+  background: white;
+}
+
+.login-box input:focus,
+.comment-box textarea:focus {
+  border-color: #2563eb;
+}
+
+.message {
+  margin: 18px 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #e0e7ff;
+  color: #1e293b;
+}
+
+.project-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.project-card > p {
+  color: #475569;
+  line-height: 1.55;
+  min-height: 48px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.project-links a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.actions {
+  margin: 18px 0;
+}
+
+.comments {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.comments h4 {
+  margin: 0 0 12px;
+}
+
+.comment {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.comment strong {
+  font-size: 13px;
+}
+
+.comment p {
+  margin: 5px 0 0;
+  color: #475569;
+}
+
+.comment-box {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.comment-box textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}

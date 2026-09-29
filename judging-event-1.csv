@@ -1,0 +1,9 @@
+assignment_id,project_id,project_name,judge_id,criterion_id,score,scored_at
+1,1,Trust the Result Demo,2,1,90.0,2026-09-27T09:48:38.097208+00:00
+1,1,Trust the Result Demo,2,2,80.0,2026-09-27T09:48:38.099509+00:00
+1,1,Trust the Result Demo,2,3,85.0,2026-09-27T09:48:38.101239+00:00
+3,1,Trust the Result Demo,6,1,70.0,2026-09-27T09:58:41.092021+00:00
+3,1,Trust the Result Demo,6,2,95.0,2026-09-27T09:58:41.093947+00:00
+3,1,Trust the Result Demo,6,3,60.0,2026-09-27T09:58:41.095899+00:00
+2,2,T1 Edited Test,2,,,
+4,2,T1 Edited Test,6,,,
